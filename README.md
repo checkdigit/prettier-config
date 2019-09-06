@@ -3,13 +3,13 @@ Check Digit [Prettier](https://prettier.io) configuration
 
 ## Usage
 
-**Install**:
+### Install
 
 ```bash
 $ npm add -D prettier @checkdigit/prettier-config
 ```
 
-**Edit `package.json`**:
+### Edit `package.json`
 
 ```jsonc
 {
@@ -30,6 +30,13 @@ $ npm add -D prettier @checkdigit/prettier-config
 In addition to running tests and linting, prettier should also be used by `npm test` to validate formatting.
 
 If there are issues, `npm run prettier:fix` will re-format the entire project to the required style.
+
+### Add `.prettierignore` file (optional)
+
+If you have generated TypeScript files you can have Prettier ignore them by creating a `.prettierignore` file like so:
+```
+src/api/*/swagger.ts
+```
 
 ### WebStorm
 
