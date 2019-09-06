@@ -1,0 +1,15 @@
+{
+  "name": "@checkdigit/prettier-config",
+  "version": "1.0.0",
+  "description": "Check Digit code formatting configuration",
+  "private": false,
+  "main": "index.json",
+  "peerDependencies": {
+    "prettier": ">= 1.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chkdgt/prettier-config.git"
+  },
+  "license": "MIT"
+}
