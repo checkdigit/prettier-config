@@ -4,20 +4,19 @@
   "description": "Check Digit code formatting configuration",
   "private": false,
   "main": "index.json",
+  "engines": {
+    "node": ">=16"
+  },
+  "author": "Check Digit, LLC",
+  "license": "MIT",
   "scripts": {
-    "prepublishOnly": "publish",
-    "postpublish": "rimraf dist .npmignore",
     "postversion": "git push && git push --tags"
   },
   "peerDependencies": {
-    "prettier": ">=2.2"
+    "prettier": ">=2.6"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/checkdigit/prettier-config.git"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "@checkdigit/publish": "^1.0.18"
   }
 }
