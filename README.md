@@ -8,7 +8,7 @@ Check Digit [Prettier](https://prettier.io) configuration
 ### Install
 
 ```bash
-$ npm add -D -E prettier @checkdigit/prettier-config
+$ npm add -D -E @checkdigit/prettier-config
 ```
 
 Important note from [Prettier installation documentation](https://prettier.io/docs/en/install.html):
@@ -16,6 +16,10 @@ Important note from [Prettier installation documentation](https://prettier.io/do
 gets the exact same version of Prettier. Even a patch release of Prettier can result in slightly different
 formatting, so you wouldn’t want different team members using different versions and formatting each other’s
 changes back and forth.
+
+To make this easier, just install `@checkdigit/prettier-config` as above, it will be locked to a specific version
+of `prettier` which will automatically be installed via its `peerDependencies`.  Do not specific `prettier` itself
+as a dependency.
 
 ### Edit `package.json`
 
