@@ -1,3 +1,5 @@
+[![MIT License](https://img.shields.io/github/license/checkdigit/prettier-config)](https://github.com/checkdigit/prettier-config/blob/master/LICENSE.txt)
+
 # prettier-config
 Check Digit [Prettier](https://prettier.io) configuration
 
