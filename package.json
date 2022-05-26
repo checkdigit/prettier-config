@@ -10,7 +10,8 @@
   "author": "Check Digit, LLC",
   "license": "MIT",
   "scripts": {
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "test": "prettier --version | grep -q '2.6.2'"
   },
   "peerDependencies": {
     "prettier": "2.6.2"
