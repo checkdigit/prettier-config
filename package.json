@@ -11,10 +11,11 @@
   "license": "MIT",
   "scripts": {
     "postversion": "git push && git push --tags",
-    "test": "prettier --version | grep -q '2.6.2'"
+    "test": "prettier --version | grep -q '2.7.1'",
+    "ci:test": "npm test"
   },
   "peerDependencies": {
-    "prettier": "2.6.2"
+    "prettier": "2.7.1"
   },
   "repository": {
     "type": "git",
