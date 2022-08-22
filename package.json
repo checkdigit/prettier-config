@@ -14,7 +14,8 @@
     "prettier:fix": "prettier --write .",
     "postversion": "git push && git push --tags",
     "test": "prettier --version | grep -q '2.7.1'",
-    "ci:test": "npm test"
+    "ci:test": "npm test",
+    "ci:style": "npm run prettier"
   },
   "peerDependencies": {
     "prettier": "2.7.1"
