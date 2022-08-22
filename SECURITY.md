@@ -5,9 +5,9 @@
 These versions of `@checkdigit/prettier` are currently being supported with security updates.
 
 | Version | Supported          |
-| ------- | ------------------ |
-| > 2.0   | :white_check_mark: |
-| < 2.0   | :x:                |
+|---------| ------------------ |
+| \>= 3.0 | :white_check_mark: |
+| \< 3.0  | :x:                |
 
 ## Reporting a Vulnerability
 
