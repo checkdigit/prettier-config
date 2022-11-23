@@ -18,7 +18,7 @@
     "ci:style": "npm run prettier"
   },
   "peerDependencies": {
-    "prettier": "2.7.1"
+    "prettier": "2.8.0"
   },
   "repository": {
     "type": "git",
