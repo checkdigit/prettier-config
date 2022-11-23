@@ -13,7 +13,7 @@
     "prettier": "prettier --list-different .",
     "prettier:fix": "prettier --write .",
     "postversion": "git push && git push --tags",
-    "test": "prettier --version | grep -q '2.7.1'",
+    "test": "prettier --version | grep -q '2.8.0'",
     "ci:test": "npm test",
     "ci:style": "npm run prettier"
   },
