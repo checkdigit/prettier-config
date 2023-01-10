@@ -32,8 +32,8 @@ as a dependency.
   // ...
   scripts: {
     // ...
-    "prettier": "prettier --list-different .",
-    "prettier:fix": "prettier --write .",
+    "prettier": "prettier --ignore-path .gitignore --list-different .",
+    "prettier:fix": "prettier --ignore-path .gitignore --write .",
     // ...
     "test": "... && npm run prettier"
     // ...
@@ -44,6 +44,9 @@ as a dependency.
 In addition to running tests and linting, prettier should also be used by `npm test` to validate formatting.
 
 If there are issues, `npm run prettier:fix` will re-format the entire project to the required style.
+
+Note: using `.gitignore` as the ignore path will ensure that Prettier will ignore files that are ignored by Git. In most
+cases this is the desired behavior, otherwise you can use a custom `.pretterignore` file.
 
 ### Add `.prettierignore` file (optional)
 
