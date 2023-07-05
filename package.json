@@ -13,12 +13,12 @@
     "prettier": "prettier --ignore-path .gitignore --list-different .",
     "prettier:fix": "prettier --ignore-path .gitignore --write .",
     "postversion": "git push && git push --tags",
-    "test": "npm run prettier && prettier --version | grep -q '2.8.8'",
+    "test": "npm run prettier && prettier --version | grep -q '3.0.0'",
     "ci:test": "npm test",
     "ci:style": "npm run prettier"
   },
   "peerDependencies": {
-    "prettier": "2.8.8"
+    "prettier": "3.0.0"
   },
   "repository": {
     "type": "git",
