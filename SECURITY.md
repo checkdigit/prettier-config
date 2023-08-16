@@ -6,8 +6,8 @@ These versions of `@checkdigit/prettier` are currently being supported with secu
 
 | Version | Supported          |
 | ------- | ------------------ |
-| \>= 3.0 | :white_check_mark: |
-| \< 3.0  | :x:                |
+| \>= 4.0 | :white_check_mark: |
+| \< 4.0  | :x:                |
 
 ## Reporting a Vulnerability
 
