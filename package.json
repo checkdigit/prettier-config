@@ -1,11 +1,11 @@
 {
   "name": "@checkdigit/prettier-config",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "Check Digit code formatting configuration",
   "private": false,
   "main": "index.json",
   "engines": {
-    "node": ">=18"
+    "node": ">=20.9"
   },
   "author": "Check Digit, LLC",
   "license": "MIT",
@@ -13,11 +13,11 @@
     "prettier": "prettier --ignore-path .gitignore --list-different .",
     "prettier:fix": "prettier --ignore-path .gitignore --write .",
     "test": "npm run ci:test",
-    "ci:test": "npm run ci:style && prettier --version | grep -q '3.0.3'",
+    "ci:test": "npm run ci:style && prettier --version | grep -q '3.1.0'",
     "ci:style": "npm run prettier"
   },
   "peerDependencies": {
-    "prettier": "3.0.3"
+    "prettier": "3.1.0"
   },
   "repository": {
     "type": "git",
