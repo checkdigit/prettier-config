@@ -4,6 +4,7 @@
   "description": "Check Digit code formatting configuration",
   "private": false,
   "main": "index.json",
+  "type": "module",
   "engines": {
     "node": ">=20.9"
   },
