@@ -1,12 +1,12 @@
 {
   "name": "@checkdigit/prettier-config",
-  "version": "5.3.0",
+  "version": "5.4.0",
   "description": "Check Digit code formatting configuration",
   "private": false,
   "main": "index.json",
   "type": "module",
   "engines": {
-    "node": ">=20.11"
+    "node": ">=20.12"
   },
   "author": "Check Digit, LLC",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "ci:style": "npm run prettier"
   },
   "peerDependencies": {
-    "prettier": "3.2.5"
+    "prettier": "3.3.0"
   },
   "repository": {
     "type": "git",
