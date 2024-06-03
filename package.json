@@ -14,7 +14,7 @@
     "prettier": "prettier --ignore-path .gitignore --list-different .",
     "prettier:fix": "prettier --ignore-path .gitignore --write .",
     "test": "npm run ci:test",
-    "ci:test": "npm run ci:style && prettier --version | grep -q '3.2.5'",
+    "ci:test": "npm run ci:style && prettier --version | grep -q '3.3.0'",
     "ci:style": "npm run prettier"
   },
   "peerDependencies": {
