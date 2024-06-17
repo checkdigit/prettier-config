@@ -1,6 +1,6 @@
 {
   "name": "@checkdigit/prettier-config",
-  "version": "5.4.0",
+  "version": "5.4.1",
   "description": "Check Digit code formatting configuration",
   "private": false,
   "main": "index.json",
@@ -14,11 +14,11 @@
     "prettier": "prettier --ignore-path .gitignore --list-different .",
     "prettier:fix": "prettier --ignore-path .gitignore --write .",
     "test": "npm run ci:test",
-    "ci:test": "npm run ci:style && prettier --version | grep -q '3.3.0'",
+    "ci:test": "npm run ci:style && prettier --version | grep -q '3.3.2'",
     "ci:style": "npm run prettier"
   },
   "peerDependencies": {
-    "prettier": "3.3.0"
+    "prettier": "3.3.2"
   },
   "repository": {
     "type": "git",
