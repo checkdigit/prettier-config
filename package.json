@@ -15,6 +15,7 @@
     "index.json"
   ],
   "scripts": {
+    "prepare": "",
     "ci:style": "npm run prettier",
     "ci:test": "npm run ci:style && prettier --version | grep -q '3.3.2'",
     "prettier": "prettier --ignore-path .gitignore --list-different .",
