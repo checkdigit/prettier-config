@@ -15,11 +15,11 @@
     "index.json"
   ],
   "scripts": {
-    "prepare": "",
     "ci:compile": "",
     "ci:lint": "",
     "ci:style": "npm run prettier",
     "ci:test": "npm run ci:style && prettier --version | grep -q '3.3.2'",
+    "prepare": "",
     "prettier": "prettier --ignore-path .gitignore --list-different .",
     "prettier:fix": "prettier --ignore-path .gitignore --config index.json --write .",
     "test": "npm run ci:test"
