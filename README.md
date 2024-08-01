@@ -20,8 +20,8 @@ Important note from [Prettier installation documentation](https://prettier.io/do
 > changes back and forth.
 
 To make this easier, just install `@checkdigit/prettier-config` as above, it will be locked to a specific version
-of `prettier` which will automatically be installed via its `peerDependencies`. Do not specific `prettier` itself
-as a dependency.
+of `prettier` which will automatically be installed via its `peerDependencies`.
+Do not specifically install `prettier` itself as a dependency.
 
 ### Edit `package.json`
 
