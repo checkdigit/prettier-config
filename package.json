@@ -1,6 +1,6 @@
 {
   "name": "@checkdigit/prettier-config",
-  "version": "6.2.0",
+  "version": "6.3.0",
   "private": false,
   "description": "Check Digit code formatting configuration",
   "repository": {
