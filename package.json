@@ -1,6 +1,6 @@
 {
   "name": "@checkdigit/prettier-config",
-  "version": "6.3.0",
+  "version": "7.0.0",
   "private": false,
   "description": "Check Digit code formatting configuration",
   "repository": {
@@ -33,6 +33,6 @@
     "prettier-plugin-tailwindcss": "0.6.11"
   },
   "engines": {
-    "node": ">=22.11"
+    "node": ">=22.14"
   }
 }
