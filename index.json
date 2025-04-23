@@ -4,6 +4,7 @@
     "prettier-plugin-packagejson",
     "@prettier/plugin-xml",
     "prettier-plugin-svelte",
-    "prettier-plugin-tailwindcss"
+    "prettier-plugin-tailwindcss",
+    "@typespec/prettier-plugin-typespec"
   ]
 }

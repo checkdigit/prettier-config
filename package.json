@@ -27,6 +27,7 @@
   "prettier": "./index.json",
   "peerDependencies": {
     "@prettier/plugin-xml": "3.4.1",
+    "@typespec/prettier-plugin-typespec": "1.0.0-rc.1",
     "prettier": "3.5.3",
     "prettier-plugin-packagejson": "2.5.10",
     "prettier-plugin-svelte": "3.3.3",
