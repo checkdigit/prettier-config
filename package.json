@@ -1,6 +1,6 @@
 {
   "name": "@checkdigit/prettier-config",
-  "version": "6.3.0",
+  "version": "7.0.0",
   "private": false,
   "description": "Check Digit code formatting configuration",
   "repository": {
@@ -27,12 +27,13 @@
   "prettier": "./index.json",
   "peerDependencies": {
     "@prettier/plugin-xml": "3.4.1",
+    "@typespec/prettier-plugin-typespec": "1.0.0-rc.1",
     "prettier": "3.5.3",
     "prettier-plugin-packagejson": "2.5.10",
     "prettier-plugin-svelte": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.11"
   },
   "engines": {
-    "node": ">=22.11"
+    "node": ">=22.14"
   }
 }
