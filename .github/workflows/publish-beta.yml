@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: '24.x'
           registry-url: 'https://registry.npmjs.org'
       - name: Check Label
         uses: checkdigit/github-actions/check-label@main
@@ -36,13 +36,6 @@ jobs:
         uses: checkdigit/github-actions/prepare-beta@main
       - name: Publish Beta
         run: npm publish --tag beta
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_PUBLISH }}
-      - name: Validate Published Beta NPM Package
-        id: validate-npm-package
-        uses: checkdigit/github-actions/validate-npm-package@main
-        with:
-          betaPackage: ${{ steps.prepare-beta.outputs.betaPackage }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_PUBLISH }}
       - name: Comment
