@@ -1,6 +1,6 @@
 {
   "name": "@checkdigit/prettier-config",
-  "version": "7.1.0",
+  "version": "7.1.1",
   "private": false,
   "description": "Check Digit code formatting configuration",
   "repository": {
@@ -18,7 +18,7 @@
     "ci:compile": "",
     "ci:lint": "",
     "ci:style": "npm run prettier",
-    "ci:test": "npm run ci:style && prettier --version | grep -q '3.6.1'",
+    "ci:test": "npm run ci:style && prettier --version | grep -q '3.6.2'",
     "prepare": "",
     "prettier": "prettier --ignore-path .gitignore --list-different .",
     "prettier:fix": "prettier --ignore-path .gitignore --write .",
@@ -29,8 +29,8 @@
     "@prettier/plugin-oxc": "0.0.4",
     "@prettier/plugin-xml": "3.4.1",
     "@typespec/prettier-plugin-typespec": "1.1.0",
-    "prettier": "3.6.1",
-    "prettier-plugin-packagejson": "2.5.15",
+    "prettier": "3.6.2",
+    "prettier-plugin-packagejson": "2.5.16",
     "prettier-plugin-svelte": "3.4.0",
     "prettier-plugin-tailwindcss": "0.6.13"
   },
