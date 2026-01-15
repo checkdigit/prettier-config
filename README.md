@@ -4,7 +4,7 @@
 
 Check Digit [Prettier](https://prettier.io) configuration
 
-Copyright © 2021–2025 [Check Digit, LLC](https://checkdigit.com)
+Copyright © 2021–2026 [Check Digit, LLC](https://checkdigit.com)
 
 ## Usage
 
