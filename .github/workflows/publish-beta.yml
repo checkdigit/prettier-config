@@ -35,7 +35,7 @@ jobs:
         id: prepare-beta
         uses: checkdigit/github-actions/prepare-beta@main
       - name: Publish Beta
-        run: npm publish --tag beta
+        run: npm publish --ignore-scripts --tag beta
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_PUBLISH }}
       - name: Comment
