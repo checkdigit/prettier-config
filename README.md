@@ -34,8 +34,8 @@ Do not specifically install `prettier` itself as a dependency.
   // ...
   scripts: {
     // ...
-    "prettier": "prettier --ignore-path .gitignore --list-different .",
-    "prettier:fix": "prettier --ignore-path .gitignore --write .",
+    "prettier": "prettier --list-different .",
+    "prettier:fix": "prettier --write .",
     // ...
     "test": "... && npm run prettier"
     // ...
@@ -47,8 +47,8 @@ In addition to running tests and linting, prettier should also be used by `npm t
 
 If there are issues, `npm run prettier:fix` will re-format the entire project to the required style.
 
-Note: using `.gitignore` as the ignore path will ensure that Prettier will ignore files that are ignored by Git. In most
-cases this is the desired behavior, otherwise you can use a custom `.pretterignore` file.
+Note: Prettier 3.0 and newer ignore files listed in `.gitignore` by default. If you need additional Prettier-specific
+exclusions, add them to a `.prettierignore` file.
 
 ### Add `.prettierignore` file (optional)
 
