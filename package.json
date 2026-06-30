@@ -20,8 +20,8 @@
     "ci:style": "npm run prettier",
     "ci:test": "npm run ci:style && prettier --version | grep -q '3.9.4'",
     "prepare": "",
-    "prettier": "prettier --list-different .",
-    "prettier:fix": "prettier --write .",
+    "prettier": "prettier . --check",
+    "prettier:fix": "prettier . --write",
     "test": "npm run ci:test"
   },
   "prettier": "./index.json",
