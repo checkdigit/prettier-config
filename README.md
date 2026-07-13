@@ -11,7 +11,7 @@ Copyright © 2021–2026 [Check Digit, LLC](https://checkdigit.com)
 ### Install
 
 ```bash
-$ npm add -D -E @checkdigit/prettier-config
+$ npm add -D @checkdigit/prettier-config
 ```
 
 Important note from [Prettier installation documentation](https://prettier.io/docs/en/install.html):

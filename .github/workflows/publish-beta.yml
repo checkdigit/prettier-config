@@ -2,8 +2,14 @@ name: Publish Beta Package
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, labeled]
     branches:
       - 'main'
+
+permissions:
+  contents: read
+  pull-requests: read
+  issues: write
 
 jobs:
   publishBeta:
