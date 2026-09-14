@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-These versions of `@checkdigit/prettier` are currently being supported with security updates.
+These versions of `@checkdigit/prettier-config` are currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
