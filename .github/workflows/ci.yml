@@ -23,10 +23,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+      - name: Use latest npm
+        run: npm install --global npm@latest
       - name: Install Dependencies
         run: npm ci --ignore-scripts
-      - name: Prepare
-        run: npm run prepare
       - name: Compile
         run: npm run ci:compile
       - name: Check Code Style
@@ -52,10 +52,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+      - name: Use latest npm
+        run: npm install --global npm@latest
       - name: Install Dependencies
         run: npm ci --ignore-scripts
-      - name: Prepare
-        run: npm run prepare
       - name: Compile
         run: npm run ci:compile
       - name: Check Code Style

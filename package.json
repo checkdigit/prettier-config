@@ -18,17 +18,16 @@
     "ci:compile": "",
     "ci:lint": "",
     "ci:style": "npm run prettier",
-    "ci:test": "npm run ci:style && prettier --version | grep -qx '3.9.6'",
-    "prepare": "",
+    "ci:test": "npm run ci:style && prettier --version | grep -qx '3.9.7'",
     "prettier": "prettier . --check",
     "prettier:fix": "prettier . --write",
     "test": "npm run ci:test"
   },
   "prettier": "./index.json",
   "peerDependencies": {
-    "@prettier/plugin-oxc": "0.2.2",
+    "@prettier/plugin-oxc": "0.2.3",
     "@prettier/plugin-xml": "3.4.2",
-    "prettier": "3.9.6",
+    "prettier": "3.9.7",
     "prettier-plugin-packagejson": "3.0.2",
     "prettier-plugin-svelte": "4.1.1",
     "prettier-plugin-tailwindcss": "0.8.1"
