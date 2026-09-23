@@ -35,11 +35,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Use latest npm
         run: npm install --global npm@latest
-      - name: Dependency Review
-        if: github.event_name == 'pull_request'
-        uses: actions/dependency-review-action@v4
-        with:
-          allow-licenses: ${{ vars.ALLOW_LICENSES }}
       - name: Check Label
         if: github.event_name == 'pull_request'
         uses: checkdigit/github-actions/check-label@main
@@ -52,6 +47,11 @@ jobs:
         run: npm ci --ignore-scripts
       - name: Audit Signatures
         run: npm audit signatures
+      - name: Dependency Review
+        if: github.event_name == 'pull_request'
+        uses: actions/dependency-review-action@v4
+        with:
+          allow-licenses: ${{ vars.ALLOW_LICENSES }}
       - name: Run Test
         if: github.event_name == 'pull_request'
         run: npm run ci:test
