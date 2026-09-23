@@ -1,6 +1,6 @@
 {
   "name": "@checkdigit/prettier-config",
-  "version": "8.2.0",
+  "version": "8.3.0",
   "private": false,
   "description": "Check Digit code formatting configuration",
   "repository": {
@@ -18,22 +18,21 @@
     "ci:compile": "",
     "ci:lint": "",
     "ci:style": "npm run prettier",
-    "ci:test": "npm run ci:style && prettier --version | grep -qx '3.9.6'",
-    "prepare": "",
+    "ci:test": "npm run ci:style && prettier --version | grep -qx '3.9.9'",
     "prettier": "prettier . --check",
     "prettier:fix": "prettier . --write",
     "test": "npm run ci:test"
   },
   "prettier": "./index.json",
   "peerDependencies": {
-    "@prettier/plugin-oxc": "0.2.2",
+    "@prettier/plugin-oxc": "0.2.3",
     "@prettier/plugin-xml": "3.4.2",
-    "prettier": "3.9.6",
+    "prettier": "3.9.9",
     "prettier-plugin-packagejson": "3.0.2",
     "prettier-plugin-svelte": "4.1.1",
     "prettier-plugin-tailwindcss": "0.8.1"
   },
   "engines": {
-    "node": ">=24.18.0"
+    "node": ">=24.20.0"
   }
 }

@@ -1,0 +1,36 @@
+{
+  "name": "@checkdigit/prettier-package-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Package key, script, and dependency ordering fixture",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "prebuild": "echo prebuild fixture",
+    "build": "echo build fixture",
+    "postbuild": "echo postbuild fixture",
+    "lint": "echo lint fixture",
+    "test": "echo test fixture"
+  },
+  "dependencies": {
+    "svelte": "5.0.0",
+    "zod": "4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.0",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

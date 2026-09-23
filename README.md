@@ -64,6 +64,11 @@ WebStorm supports Prettier, turn on within the preferences at: Languages and Fra
 
 You can use ⌥⇧⌘P to format a block with Prettier. WebStorm should also ask if you want to apply Prettier code style rules across the project. (say yes)
 
+## Formatting fixtures
+
+[`test`](test/README.md) contains formatting baselines covering TypeScript and every configured plugin.
+`npm test` checks them; after a dependency or configuration change, run `npm run prettier:fix` and review the fixture diffs.
+
 ## License
 
 MIT
