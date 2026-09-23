@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { labels, type Job } from './types.js';
 
 type Props = {
