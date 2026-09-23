@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<catalog
+  xmlns="urn:checkdigit:fixtures:catalog"
+  xmlns:meta="urn:checkdigit:fixtures:metadata"
+  version="1"
+  description="An XML fixture with namespaces, attributes, and mixed content"
+>
+  <!-- Attribute wrapping and self-closing elements. -->
+  <entry
+    id="alpha"
+    enabled="true"
+    category="formatting"
+    description="A sufficiently long attribute value to exercise wrapping of opening tags"
+  >
+    <title>Prettier &amp; XML</title>
+    <meta:source path="test/document.xml" language='en' />
+    <tags>
+      <tag name="namespaces" />
+      <tag name="whitespace" />
+    </tags>
+    <description>Keep <emphasis
+      >mixed content</emphasis> separated by spaces.</description>
+    <expression><![CDATA[value < 10 && label != "disabled"]]></expression>
+  </entry>
+  <entry id="beta" enabled="false" />
+</catalog>
