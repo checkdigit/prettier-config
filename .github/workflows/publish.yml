@@ -1,21 +1,24 @@
 name: Publish
 
 on:
-  release:
-    types: [created]
+  workflow_dispatch: {}
   pull_request:
-    types: [opened, synchronize, reopened, labeled]
+    types: [opened, synchronize, reopened, labeled, unlabeled]
     branches:
       - 'main'
 
 jobs:
   publish:
-    name: ${{ github.event_name == 'release' && 'Publish Release' || 'Publish Beta' }}
+    name: ${{ github.event_name == 'workflow_dispatch' && 'Publish Release' || 'Publish Beta' }}
     if: >-
-      (github.event_name == 'release' && github.event.action == 'created') ||
+      (github.event_name == 'workflow_dispatch' &&
+       github.ref_type == 'tag' && startsWith(github.ref_name, 'v')) ||
       (github.event_name == 'pull_request' &&
        github.event.pull_request.base.ref == 'main' &&
        github.event.pull_request.head.repo.full_name == github.repository)
+    concurrency:
+      group: publish-${{ github.ref }}-${{ github.sha }}
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     environment: npm-publish
     permissions:
@@ -25,8 +28,11 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v7
+      - name: Dependency Review
+        if: github.event_name == 'pull_request'
+        uses: actions/dependency-review-action@v5
         with:
-          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.ref }}
+          allow-licenses: ${{ vars.ALLOW_LICENSES }}
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
@@ -55,11 +61,41 @@ jobs:
         id: prepare-beta
         uses: checkdigit/github-actions/prepare-beta@main
       - name: Publish Release
-        if: github.event_name == 'release'
-        run: npm publish
+        if: github.event_name == 'workflow_dispatch'
+        run: npm publish --access public
       - name: Publish Beta
         if: github.event_name == 'pull_request'
-        run: npm publish --tag beta
+        shell: bash
+        env:
+          BETA_PACKAGE: ${{ steps.prepare-beta.outputs.betaPackage }}
+        run: |
+          pack_metadata=$(npm pack --json --pack-destination "$RUNNER_TEMP")
+          archive=$(jq -er '.[] | .filename' <<< "$pack_metadata")
+          integrity=$(jq -er '.[] | .integrity' <<< "$pack_metadata")
+
+          if ! published_integrity=$(npm view "$BETA_PACKAGE" dist.integrity --prefer-online 2>/dev/null); then
+            if npm publish "$RUNNER_TEMP/$archive" --tag beta --access public; then
+              exit 0
+            else
+              publish_status=$?
+              # The same version may have been uploaded while this job was running.
+              published_integrity=$(npm view "$BETA_PACKAGE" dist.integrity --prefer-online) || exit "$publish_status"
+            fi
+          fi
+
+          if [[ "$published_integrity" != "$integrity" ]]; then
+            echo "::error::$BETA_PACKAGE is already published with different contents."
+            exit 1
+          fi
+          echo "$BETA_PACKAGE is already published with matching contents."
+      - name: Validate Published Beta NPM Package
+        if: github.event_name == 'pull_request'
+        uses: checkdigit/github-actions/validate-npm-package@main
+        with:
+          betaPackage: ${{ steps.prepare-beta.outputs.betaPackage }}
+        env:
+          # The action writes an npmrc containing this variable; public downloads need no token.
+          NPM_TOKEN: ''
       - name: Comment npm publish result
         if: github.event_name == 'pull_request'
         uses: checkdigit/github-actions/comment-npm-publish@main
