@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: ["26.x", "27.0.0-alpha.0.1.1"]
+        node-version: ["24.x", "26.x", "27.0.0-alpha.0.1.1"]
     steps:
       - name: Checkout Code
         uses: actions/checkout@v7
@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: ["26.x", "27.0.0-alpha.0.1.1"]
+        node-version: ["24.x", "26.x", "27.0.0-alpha.0.1.1"]
     steps:
       - name: Checkout Code
         uses: actions/checkout@v7
