@@ -2,7 +2,7 @@
 export interface Job {
   readonly id: string;
   name: string;
-  status: "pending" | "running" | "complete";
+  status: 'pending' | 'running' | 'complete';
   metadata?: { owner: string; tags: readonly string[] };
 }
 
@@ -10,7 +10,7 @@ export type Result<Value, Failure = Error> =
   { success: true; value: Value } | { success: false; error: Failure };
 
 export type JobWithHistory = Job & {
-  history: readonly { status: Job["status"]; timestamp: number }[];
+  history: readonly { status: Job['status']; timestamp: number }[];
 };
 
 export type Handlers<Value> = {
@@ -28,26 +28,26 @@ export type Unwrap<Value> =
       : Value;
 
 export type JobEntry = readonly [
-  id: Job["id"],
+  id: Job['id'],
   job: Job,
-  ...history: Job["status"][],
+  ...history: Job['status'][],
 ];
 
-export type JobEvent = `${Job["status"]}:${string}`;
+export type JobEvent = `${Job['status']}:${string}`;
 
-export const statuses = ["pending", "running", "complete"] as const;
+export const statuses = ['pending', 'running', 'complete'] as const;
 
 export const labels = {
-  pending: "Waiting to start",
-  running: "Currently processing",
-  complete: "Ready to review",
-} satisfies Record<Job["status"], string>;
+  pending: 'Waiting to start',
+  running: 'Currently processing',
+  complete: 'Ready to review',
+} satisfies Record<Job['status'], string>;
 
-export const thaiJobStatusLabels = ["รอดำเนินการ", "กำลังประมวลผล", "เสร็จสมบูรณ์"];
+export const thaiJobStatusLabels = ['รอดำเนินการ', 'กำลังประมวลผล', 'เสร็จสมบูรณ์'];
 
 export const initialJob = {
-  id: "job-001",
-  name: "Review formatting changes after updating dependencies",
-  status: "pending",
-  metadata: { owner: "platform", tags: ["formatting", "regression"] },
+  id: 'job-001',
+  name: 'Review formatting changes after updating dependencies',
+  status: 'pending',
+  metadata: { owner: 'platform', tags: ['formatting', 'regression'] },
 } satisfies Job;

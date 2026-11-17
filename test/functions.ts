@@ -1,4 +1,4 @@
-import { initialJob, type Job, type Result } from "./types.js";
+import { initialJob, type Job, type Result } from './types.js';
 
 // Overloads and generic functions with multiline parameters and return types.
 export function findJob(jobs: readonly Job[], id: string): Job | undefined;
@@ -7,7 +7,7 @@ export function findJob(
   jobs: readonly Job[],
   selection: string | readonly string[],
 ): Job | Job[] | undefined {
-  return typeof selection === "string"
+  return typeof selection === 'string'
     ? jobs.find(({ id }) => id === selection)
     : jobs.filter(({ id }) => selection.includes(id));
 }
@@ -49,5 +49,5 @@ export async function processJobs(
 
 export const renameJob = (
   { name, ...job }: Job = initialJob,
-  prefix = "Reviewed",
+  prefix = 'Reviewed',
 ): Job => ({ ...job, name: `${prefix}: ${name}` });

@@ -28,9 +28,8 @@ npx --yes prettier@3.9.9 --check test
 ```
 
 Prettier 3.9.9 wraps the Thai labels in `types.ts`, removes Markdown link
-escapes in `expressions.ts`, inserts a space after the leading `+` in the CSS
-selector in `component.svelte`, and emits a literal carriage return in
-`jobs.graphql`.
+escapes in `expressions.ts`, and inserts a space after the leading `+` in the CSS
+selector in `component.svelte`.
 
 After changing the configuration or upgrading Prettier or a plugin:
 

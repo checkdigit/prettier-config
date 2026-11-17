@@ -23,6 +23,7 @@
     "prettier:fix": "prettier . --write",
     "test": "npm run ci:test"
   },
+  "prettier": "./index.json",
   "peerDependencies": {
     "@prettier/plugin-oxc": "0.2.4",
     "@prettier/plugin-xml": "3.4.2",

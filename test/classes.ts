@@ -1,4 +1,4 @@
-import type { Job } from "./types.js";
+import type { Job } from './types.js';
 
 // Class fields, parameter properties, accessors, and method signatures.
 export class JobQueue implements Iterable<Job> {

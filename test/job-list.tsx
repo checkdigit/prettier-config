@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { labels, type Job } from "./types.js";
+import { labels, type Job } from './types.js';
 
 type Props = {
   jobs: readonly Job[];
@@ -26,8 +26,8 @@ export function JobList({ jobs, selectedId, onSelect }: Props) {
                 aria-pressed={job.id === selectedId}
                 className={
                   job.id === selectedId
-                    ? "w-full rounded bg-blue-600 p-4 text-white hover:bg-blue-700 focus:ring-2"
-                    : "w-full rounded bg-slate-100 p-4 text-slate-900 hover:bg-slate-200 focus:ring-2"
+                    ? 'w-full rounded bg-blue-600 p-4 text-white hover:bg-blue-700 focus:ring-2'
+                    : 'w-full rounded bg-slate-100 p-4 text-slate-900 hover:bg-slate-200 focus:ring-2'
                 }
                 onClick={() => onSelect(job)}
               >

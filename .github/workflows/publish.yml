@@ -5,7 +5,7 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, labeled, unlabeled]
     branches:
-      - "main"
+      - 'main'
 
 jobs:
   publish:
@@ -28,8 +28,6 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v7
-        with:
-          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
       - name: Dependency Review
         if: github.event_name == 'pull_request'
         uses: actions/dependency-review-action@v5
@@ -38,9 +36,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: "26.x"
+          node-version: '26.x'
           package-manager-cache: false
-          registry-url: "https://registry.npmjs.org"
+          registry-url: 'https://registry.npmjs.org'
       - name: Use latest npm
         run: npm install --global npm@latest
       - name: Check Label
@@ -97,7 +95,7 @@ jobs:
           betaPackage: ${{ steps.prepare-beta.outputs.betaPackage }}
         env:
           # The action writes an npmrc containing this variable; public downloads need no token.
-          NPM_TOKEN: ""
+          NPM_TOKEN: ''
       - name: Comment npm publish result
         if: github.event_name == 'pull_request'
         uses: checkdigit/github-actions/comment-npm-publish@main
