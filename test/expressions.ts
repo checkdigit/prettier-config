@@ -59,3 +59,9 @@ export const retryDelay =
   1_000;
 
 export const jobIdPattern = /^job-(?<sequence>\d{3,})$/u;
+
+declare const markdown: (strings: TemplateStringsArray) => string;
+
+export const filterHelp = markdown`
+See [the label with literal HTML entities](/jobs/labels/\&quot;urgent\&quot;).
+`;

@@ -19,6 +19,19 @@ Run `npm test` from the repository root to check these baselines with the curren
 Prettier configuration and dependency versions. The existing `prettier . --check`
 command includes every fixture, so no separate test runner is needed.
 
+With the repository plugins installed, these commands compare the Prettier
+3.10.1 baselines against 3.9.9.
+
+```sh
+npx --yes prettier@3.10.1 --check test
+npx --yes prettier@3.9.9 --check test
+```
+
+Prettier 3.9.9 wraps the Thai labels in `types.ts`, removes Markdown link
+escapes in `expressions.ts`, inserts a space after the leading `+` in the CSS
+selector in `component.svelte`, and emits a literal carriage return in
+`jobs.graphql`.
+
 After changing the configuration or upgrading Prettier or a plugin:
 
 1. Run `npm test` to identify formatting changes.

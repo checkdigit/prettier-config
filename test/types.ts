@@ -43,6 +43,8 @@ export const labels = {
   complete: 'Ready to review',
 } satisfies Record<Job['status'], string>;
 
+export const thaiJobStatusLabels = ['รอดำเนินการ', 'กำลังประมวลผล', 'เสร็จสมบูรณ์'];
+
 export const initialJob = {
   id: 'job-001',
   name: 'Review formatting changes after updating dependencies',

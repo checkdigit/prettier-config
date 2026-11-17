@@ -64,6 +64,9 @@
 </section>
 
 <style>
+  li:nth-child(+2n + 1) {
+    background-color: #f1f5f9;
+  }
   .completed {
     opacity: 0.6;
     text-decoration: line-through;
