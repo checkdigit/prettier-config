@@ -2,7 +2,7 @@ name: Check Dependencies
 
 on:
   schedule:
-    - cron: '0 10 * * 1-5'
+    - cron: "0 10 * * 1-5"
   workflow_dispatch: {}
 
 permissions:
@@ -21,7 +21,7 @@ jobs:
       - uses: checkdigit/github-actions/check-dependencies@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEBUG: '*'
+          DEBUG: "*"
         with:
-          max-age-days: '90'
-          contributor-lookback-days: '90'
+          max-age-days: "90"
+          contributor-lookback-days: "90"

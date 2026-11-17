@@ -33,13 +33,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: '26.x'
+          node-version: "26.x"
           cache: npm
       - name: Use latest npm
         run: npm install --global npm@latest
       - name: Update dependencies
         uses: checkdigit/github-actions/update-dependencies@main
         env:
-          CI: 'true'
+          CI: "true"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEBUG: 'github-actions:update-dependencies'
+          DEBUG: "github-actions:update-dependencies"
